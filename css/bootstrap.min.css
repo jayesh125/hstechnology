@@ -1,6 +1,7 @@
 ﻿:root {
     --bs-blue: #0048AE;
     --bs-white: #fff;
+    --bs-navwhite: #2578e47d;
     --bs-grey: #FCFCFC;
     --bs-indigo: #6610f2;
     --bs-purple: #6f42c1;
@@ -10,7 +11,7 @@
     --bs-yellow: #ffc107;
     --bs-green: #198754;
     --bs-teal: #20c997;
-    --bs-cyan: #0dcaf0;
+    --bs-cyan: #65e1f9;
     --bs-gray-dark: #343a40;
     --bs-primary: #0048AE;
     --bs-secondary: #0BE1FF;
@@ -19,6 +20,7 @@
     --bs-warning: #ffc107;
     --bs-danger: #dc3545;
     --bs-light: #F2F5F9;
+    --bs-lightfaint: #f2f5f98a;
     --bs-dark: #16243D;
     --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -44,7 +46,6 @@ body {
     font-weight: 400;
     line-height: 1.5;
     color: #787878;
-    background-color: #fff;
     text-size: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 }
@@ -8280,6 +8281,15 @@ fieldset:disabled .btn {
     color: #015fc9 !important
 }
 
+.text-primary-heading {
+    color: #015fc9 !important;
+    font-weight: 700 !important;
+    font-size: 5rem !important;
+    font-style: italic !important;
+    line-height: 1.5 !important;
+    font-family: monospace;
+}
+
 .text-secondary {
     color: #0be1ff !important
 }
@@ -8310,6 +8320,10 @@ fieldset:disabled .btn {
 
 .text-white {
     color: #fff !important
+}
+
+.text-white1 {
+    color: #0048AE !important
 }
 
 .text-body {
@@ -8356,8 +8370,11 @@ fieldset:disabled .btn {
     background-color: #dc3545 !important
 }
 
-.bg-light {
-    background-color: #f2f5f9 !important
+.bg-lightfaint {
+    background-color: #f2f5f98a;
+}
+.bg-light{
+    background-color: #f8f9fa !important
 }
 
 .bg-dark {

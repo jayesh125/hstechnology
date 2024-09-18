@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
         } else if (isDeleting && text === '') {
             isDeleting = false;
             index = (index + 1) % texts.length;
-            typingSpeed = 500;
+            typingSpeed = 3000;
         }
 
         setTimeout(type, typingSpeed);

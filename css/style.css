@@ -22,6 +22,11 @@
     z-index: 99;
 }
 
+.bg-img {
+    background-image: url("../img/banner-bg.png");
+}
+
+
 
 /*** Button Start ***/
 .btn {
@@ -130,10 +135,11 @@
 .nav-bar {
     background: var(--bs-white);
     transition: 1s;
+    border-radius: 10px;
 }
 
 .navbar-light .navbar-brand img {
-    max-height: 60px;
+    max-height: 40px;
     transition: .5s;
 }
 
@@ -262,6 +268,11 @@
 
 
 /*** Carousel Hero Header Start ***/
+.header-carousel {
+    background-image: url("../img/bg2.png");
+    /* height: 580px; */
+}
+
 .header-carousel .header-carousel-item {
     height: 500px;
 }
@@ -307,7 +318,7 @@
     height: 100%;
     left: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, .2);
+    /* background: rgba(0, 0, 0, .2); */
     display: flex;
     align-items: center;
 }
@@ -342,15 +353,20 @@
     }
 }
 
+/* Import a stylish font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
 .typewriter {
+    font-family: var(--bs-font-monospace);
+    height: 90px;
     display: inline-block;
     overflow: hidden;
     /* Ensures the text is hidden when it is not yet typed out */
     border-right: 2px solid var(--bs-primary);
     /* The blinking cursor */
     white-space: nowrap;
-    animation: typing 4s steps(30, end), blink-caret .75s step-end infinite;
-    color: white;
+    animation: typing 4s none, blink-caret .75s step-end infinite;
+    /* Smoother transition */
 }
 
 @keyframes typing {
@@ -402,25 +418,86 @@
 
 
 /*** Feature Start ***/
+
+.gradient-background {
+    background: linear-gradient(95deg, #aceee6, #a4a2f5, #72fff1);
+    background-size: 180% 180%;
+    animation: gradient-animation 12s ease-in-out infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 .feature .feature-item {
-    border-radius: 10px;
-    background: var(--bs-white);
+    background: rgba(20, 148, 244, 0.25);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.4px);
+    -webkit-backdrop-filter: blur(5.4px);
+    border: 1px solid rgba(20, 148, 244, 0.32);
     transition: 0.5s;
+    margin: 10px 10px;
+    text-align: center;
+    height: 290px;
+    width: 150px;
+    color: var(--bs-white);
 }
 
 .feature .feature-item:hover {
-    background: var(--bs-primary);
+    background: rgba(20, 41, 244, 0.25);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.7px);
+    -webkit-backdrop-filter: blur(11.7px);
+    border: 1px solid rgba(20, 41, 244, 0.32);
+    color: var(--bs-white);
 }
 
 .feature .feature-item .feature-icon {
     position: relative;
-    width: 100px;
+    width: 100%;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    background: var(--bs-light);
+    background: var(--bs-dark);
+}
+
+@media (min-width: 375px) {
+    .feature .feature-item .feature-icon {
+        position: relative;
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background: var(--bs-white);
+    }
+
+    .feature .feature-item {
+        border-radius: 10px;
+        transition: 0.5s;
+        text-align: center;
+        height: 300px;
+        width: 260px;
+    }
+}
+
+.feature .feature-item .feature-icon img {
+    height: 130px;
 }
 
 .feature .feature-item:hover .feature-icon i {
@@ -436,7 +513,7 @@
     left: 0;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    background: var(--bs-dark);
+    background: var(--bs-lightfaint);
     transition: 0.5s;
     z-index: 1;
 }
@@ -459,7 +536,8 @@
     color: var(--bs-white);
 }
 
-.feature .feature-item:hover h4,
+.feature .feature-item:hover h5,
+.feature .feature-item:hover h6,
 .feature .feature-item:hover p {
     color: var(--bs-white);
 }
@@ -476,6 +554,10 @@
 
 /*** Feature End ***/
 
+.counter {
+    border-radius: 10px;
+    padding: 20px;
+}
 
 /*** Service Start ***/
 .service .service-item {
@@ -604,6 +686,13 @@
 
 
 /*** FAQs Start ***/
+
+
+.faq-section {
+    background-image: url("../img/bg1.jpg") no-repeat;
+    padding: 60px 0;
+}
+
 .faq-section .accordion .accordion-item .accordion-header .accordion-button {
     color: var(--bs-white);
     background: rgba(1, 95, 201, .8);
