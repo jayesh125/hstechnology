@@ -1194,6 +1194,10 @@
     line-height: 35px;
 }
 
+.footer .footer-item img {
+    height: 105px;
+}
+
 .footer .footer-item a:hover {
     color: var(--bs-primary);
 }
