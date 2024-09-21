@@ -136,6 +136,7 @@
     background: var(--bs-white);
     transition: 1s;
     border-radius: 10px;
+    z-index: 500;
 }
 
 .navbar-light .navbar-brand img {
@@ -423,7 +424,9 @@
 .gradient-background {
     background: linear-gradient(95deg, #aceee6, #a4a2f5, #72fff1);
     background-size: 180% 180%;
-    animation: gradient-animation 12s ease-in-out infinite;
+    animation: gradient-animation 12s ease infinite;
+    position: relative;
+    overflow: hidden;
 }
 
 @keyframes gradient-animation {
@@ -477,14 +480,16 @@
 }
 
 @media (min-width: 344px) {
+    .feature{
+        align-items: center;
+        justify-content: center;
+    }
     .feature .feature-item .feature-icon {
         position: relative;
-        width: 100%;
+        /* width: 100%; */
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
         background: var(--bs-white);
     }
 
