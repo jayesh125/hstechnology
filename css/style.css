@@ -443,7 +443,16 @@
     }
 }
 
+.feature{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+}
 .feature .feature-item {
+    display: flex;
+    flex-direction: column;
     background: rgba(20, 148, 244, 0.25);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
