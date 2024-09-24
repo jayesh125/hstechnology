@@ -270,13 +270,9 @@
 
 
 /*** Carousel Hero Header Start ***/
-.header-carousel {
-    background-image: url("../img/bg2.png");
-    /* height: 580px; */
-}
 
 .header-carousel .header-carousel-item {
-    height: 500px;
+    height: auto;
 }
 
 .header-carousel .owl-nav .owl-prev,
@@ -337,7 +333,7 @@
 
 @media (max-width: 767px) {
     .header-carousel .header-carousel-item {
-        height: 950px;
+        height: 750px;
     }
 
     .header-carousel .owl-nav .owl-prev {
@@ -355,12 +351,25 @@
     }
 }
 
+@media (max-width: 420px) {
+    .header-carousel .carousel-img img {
+        height: 100%;
+    }
+
+    .header-carousel .carousel-img {
+        align-self: center;
+        align-items: center;
+        height: 320px;
+        width: 350px;
+    }
+}
+
 /* Import a stylish font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
 
 .typewriter {
     font-family: var(--bs-font-monospace);
-    height: 90px;
+    height: 80px;
     display: inline-block;
     overflow: hidden;
     /* Ensures the text is hidden when it is not yet typed out */
@@ -390,6 +399,13 @@
 
     50% {
         border-color: var(--bs-white);
+    }
+}
+
+@media (max-width: 420px) {
+    .typewriter {
+        font-size: 18px;
+        height: 60px;
     }
 }
 
@@ -556,6 +572,7 @@
         flex: 0 0 100%;
     }
 }
+
 /* For mobile screens up to 420px */
 @media (max-width: 420px) {
     .feature {
@@ -568,7 +585,7 @@
 
     /* Adjust to four columns */
     .feature .feature-item {
-        width: 80%;
+        width: 100%;
         /* Four columns per row */
         height: auto;
         /* Allow height to adjust based on content */
@@ -579,6 +596,7 @@
     .feature .feature-item .feature-icon {
         padding: 0rem;
     }
+
     /* Adjusting icon size for smaller screens */
     .feature .feature-item .feature-icon img {
         height: 50px;
@@ -589,6 +607,7 @@
     /* Adjust font sizes for headings */
     .feature .feature-item h5 {
         font-size: 8px;
+        font-weight: bold;
     }
 
     .feature .feature-item h6 {
@@ -624,6 +643,88 @@
 
 
 /*** Feature End ***/
+
+/* instagram-feed */
+.instagram-container {
+    text-align: center; /* Center the block */
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+    height: auto;
+}
+
+.instagram-outer-wrapper {
+    display: inline-block;
+    text-align: center;
+    width: 300%;
+    max-width: 1200px; /* You can adjust the max width */
+}
+
+.instagram-header,
+.instagram-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.instagram-profile-pic {
+    background-color: #F4F4F4;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin-right: 14px;
+}
+
+.instagram-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.instagram-name,
+.instagram-handle {
+    background-color: #F4F4F4;
+    border-radius: 4px;
+    height: 14px;
+}
+
+.instagram-name {
+    margin-bottom: 6px;
+    width: 100px;
+}
+
+.instagram-handle {
+    width: 60px;
+}
+
+.instagram-image-placeholder {
+    padding: 19% 0;
+}
+
+.instagram-icon {
+    display: block;
+    margin: 12px auto;
+}
+
+.instagram-footer {
+    color: #3897f0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 550;
+    line-height: 18px;
+    padding-top: 8px;
+}
+
+.instagram-timestamp {
+    color: #c9c8cd;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    margin: 8px 0;
+}
+
+/* instagram-end */
 
 .counter {
     border-radius: 10px;
@@ -867,7 +968,7 @@
 
 .blog .blog-item .blog-img img {
     transition: 0.5s;
-    height:auto;
+    height: auto;
 }
 
 .blog .blog-item:hover .blog-img img {
@@ -1211,7 +1312,8 @@
 
 .team .team-item .team-title h6 {
     color: var(--bs-white);
-    size: 0.3rem;
+    size: 0.5rem;
+    padding: 1rem;
 }
 
 .team .team-item:hover .team-title {
@@ -1222,7 +1324,7 @@
     .team-img img {
         width: auto;
         height: 8rem;
-        padding: 5px;
+        padding: 1rem;
         background-color: rgba(255, 255, 255, 0.568);
     }
 
@@ -1236,12 +1338,9 @@
         margin: 0px;
     }
 
-    .team .team-item .team-img .team-icon {
-        display: none !important;
-    }
-    
-    .team .team-item:hover .team-img .team-icon {
-        display: none;
+    .team .team-item .team-title p {
+        padding: 0.5rem;
+        font-size: 0.7rem;
     }
 }
 
