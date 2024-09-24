@@ -272,7 +272,7 @@
 /*** Carousel Hero Header Start ***/
 
 .header-carousel .header-carousel-item {
-    height: auto;
+    height: 600px;
 }
 
 .header-carousel .owl-nav .owl-prev,
@@ -963,7 +963,7 @@
     border-top-right-radius: 10px;
     position: relative;
     overflow: hidden;
-    height: 15rem;
+    height: 18rem;
 }
 
 .blog .blog-item .blog-img img {
@@ -1091,7 +1091,7 @@
 }
 
 .background span:nth-child(4) {
-    color: #14d8e6;
+    color: #14d8e69c;
     top: 79%;
     left: 50%;
     animation-duration: 14s;
@@ -1111,7 +1111,7 @@
 }
 
 .background span:nth-child(6) {
-    color: #FFACAC;
+    color: #ffacac9c;
     top: 67%;
     left: 25%;
     animation-duration: 42s;
@@ -1121,7 +1121,7 @@
 }
 
 .background span:nth-child(7) {
-    color: #FFACAC;
+    color: #ffacac9c;
     top: 80%;
     left: 15%;
     animation-duration: 20s;
@@ -1141,7 +1141,7 @@
 }
 
 .background span:nth-child(9) {
-    color: #573c879d;
+    color: #573c87b7;
     top: 60%;
     left: 27%;
     animation-duration: 54s;
@@ -1181,7 +1181,7 @@
 }
 
 .background span:nth-child(13) {
-    color: #FFACAC;
+    color: #ffacac9c;
     top: 88%;
     left: 22%;
     animation-duration: 10s;
@@ -1250,6 +1250,12 @@
     box-shadow: 40vmin 0 5.347873916394244vmin currentColor;
 }
 
+.team{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #f5f5f5;
+}
 .team-img img {
     width: auto;
     height: 240px;
@@ -1310,7 +1316,7 @@
     transition: 0.5s;
 }
 
-.team .team-item .team-title h6 {
+.team .team-item .team-title p {
     color: var(--bs-white);
     size: 0.5rem;
     padding: 1rem;
@@ -1320,7 +1326,7 @@
     background: var(--bs-dark);
 }
 
-@media (max-width: 380px) {
+@media (max-width: 420px) {
     .team-img img {
         width: auto;
         height: 8rem;
