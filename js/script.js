@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
             // Create the accordion HTML for the major topic
             const accordionHTML = `
-            <div class="accordion-item">
+            <div class="accordion-item wow fadeInUp" data-wow-delay="0.5s">
                 <h2 class="accordion-header" id="heading${index}">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${index}" aria-expanded="false" aria-controls="collapse${index}">
                         ${majorTopic}

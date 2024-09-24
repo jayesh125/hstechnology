@@ -103,9 +103,10 @@
 
 
 /*** Topbar Start ***/
-.topbar{
+.topbar {
     padding: 1px 0;
 }
+
 .topbar .dropdown-toggle::after {
     border: none;
     content: "\f107";
@@ -280,8 +281,8 @@
     height: 600px;
 }
 
-.header-carousel h4{
-    font-weight: bold ;
+.header-carousel h4 {
+    font-weight: bold;
     text-transform: capitalize;
 }
 
@@ -878,7 +879,8 @@
 
 .course-title {
     text-align: center;
-    background-color: #004c99; /* Blue background */
+    background-color: #004c99;
+    /* Blue background */
     color: white;
     padding: 20px;
     font-size: 24px;
@@ -886,7 +888,7 @@
     margin-bottom: 30px;
 }
 
-.faq-section .col-md-6{
+.faq-section .col-md-6 {
     width: 40%;
 }
 
@@ -959,22 +961,29 @@
     #accordionContainer {
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap; /* Allows items to wrap into the next row */
-        justify-content: space-around; /* Space between columns */
+        flex-wrap: wrap;
+        /* Allows items to wrap into the next row */
+        justify-content: space-around;
+        /* Space between columns */
     }
 
     .accordion {
-        flex: 0 0 48%; /* Each accordion will take about 48% of the row */
-        margin-bottom: 1rem; /* Add spacing between rows */
+        flex: 0 0 48%;
+        /* Each accordion will take about 48% of the row */
+        margin-bottom: 1rem;
+        /* Add spacing between rows */
     }
 
     .accordion-button {
-        font-size: 8px; /* Smaller button text */
-        padding: 10px; /* Reduce padding for small screens */
+        font-size: 8px;
+        /* Smaller button text */
+        padding: 10px;
+        /* Reduce padding for small screens */
     }
 
     .accordion-body ul li {
-        font-size: 11px; /* Adjust list font size */
+        font-size: 11px;
+        /* Adjust list font size */
     }
 }
 
@@ -1367,10 +1376,16 @@
 }
 
 @media (max-width: 420px) {
+
+    .team .team-item {
+        justify-content: center;
+        width: 100%;
+    }
+
     .team-img img {
-        width: auto;
-        height: 8rem;
-        padding: 1rem;
+        width: 8rem;
+        height: 5rem;
+        padding: 0.2rem;
         background-color: rgba(255, 255, 255, 0.568);
     }
 
@@ -1380,13 +1395,42 @@
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
         transition: 0.5s;
-        font-size: 8px;
         margin: 0px;
+        justify-content: center;
     }
 
     .team .team-item .team-title p {
         padding: 0.5rem;
-        font-size: 0.7rem;
+        font-size: 0.5rem;
+    }
+
+    .team .team-item .team-img .team-icon {
+        position: absolute;
+        bottom: 2px;
+        right: 20px;
+        margin-bottom: 170%;
+        transition: 0.5s;
+        z-index: 9;
+    }
+
+    .team .row {
+        --bs-gutter-x: 0.5rem;
+    }
+
+    .team .col-12 {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .team .col-md-6 {
+        max-width: 25%;
+        flex: 0 0 100%;
+    }
+
+    .team .col-lg-4 {
+        max-width: 100%;
+        /* 4 columns layout */
+        flex: 0 0 25%;
     }
 }
 
