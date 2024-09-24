@@ -103,6 +103,9 @@
 
 
 /*** Topbar Start ***/
+.topbar{
+    padding: 1px 0;
+}
 .topbar .dropdown-toggle::after {
     border: none;
     content: "\f107";
@@ -133,20 +136,22 @@
 
 /*** Navbar Start ***/
 .nav-bar {
-    background: var(--bs-white);
+    background: rgba(255, 255, 255, 0.566);
     transition: 1s;
-    border-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
     z-index: 500;
+    padding: 1px 0;
 }
 
 .navbar-light .navbar-brand img {
-    height: 80px;
-    width: 100px;
+    height: 30%;
+    width: 60%;
     transition: .5s;
 }
 
 .nav-bar .navbar-light .navbar-brand img {
-    max-height: 50px;
+    max-height: 80px;
 }
 
 .navbar .navbar-nav .nav-item .nav-link {
@@ -156,7 +161,7 @@
 .navbar .navbar-nav .nav-item {
     display: flex;
     align-items: center;
-    padding: 15px;
+    padding: 10px;
 }
 
 .navbar-light .navbar-nav .nav-item:hover,
@@ -168,7 +173,7 @@
 
 @media (max-width: 991px) {
     .navbar {
-        padding: 20px 0;
+        padding: 1px 0;
     }
 
     .navbar .navbar-nav .nav-link {
@@ -220,7 +225,7 @@
 
 @media (min-width: 992px) {
     .navbar {
-        padding: 20px 0;
+        padding: 1px 0;
     }
 
     .navbar .nav-btn {
@@ -273,6 +278,11 @@
 
 .header-carousel .header-carousel-item {
     height: 600px;
+}
+
+.header-carousel h4{
+    font-weight: bold ;
+    text-transform: capitalize;
 }
 
 .header-carousel .owl-nav .owl-prev,
@@ -646,7 +656,8 @@
 
 /* instagram-feed */
 .instagram-container {
-    text-align: center; /* Center the block */
+    text-align: center;
+    /* Center the block */
     display: flex;
     justify-content: center;
     padding: 16px;
@@ -657,7 +668,8 @@
     display: inline-block;
     text-align: center;
     width: 300%;
-    max-width: 1200px; /* You can adjust the max width */
+    max-width: 1200px;
+    /* You can adjust the max width */
 }
 
 .instagram-header,
@@ -858,89 +870,116 @@
 
 /*** FAQs Start ***/
 
-.faq-section {
-    padding: 20px 0;
-    font-size: 10px;
-    display: flex;
-}
-
-.faq-content {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
 }
 
-.faq-image {
-    flex: 1;
+.course-title {
+    text-align: center;
+    background-color: #004c99; /* Blue background */
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.faq-section .col-md-6{
+    width: 40%;
+}
+
+#accordionContainer {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
 }
 
-.faq-image img {
-    max-width: 100%;
-    height: auto;
-    transition: 0.5s;
+.accordion {
+    width: 100%;
 }
 
-.faq-section .accordion .accordion-item .accordion-header .accordion-button {
-    color: var(--bs-white);
-    background: rgba(1, 95, 201, .8);
-    font-size: 18px;
-    transition: none;
+.accordion-item {
+    margin-bottom: 10px;
 }
 
-.faq-section .accordion .accordion-item .accordion-header .accordion-button.collapsed {
-    color: var(--bs-primary);
-    background: var(--bs-light);
+.accordion-button {
+    background-color: white;
+    color: black;
+    border: 1px solid #004c99;
+    font-weight: bold;
+    text-align: left;
+    font-size: 16px;
+    padding: 15px;
+    width: 100%;
 }
 
-.faq-section .accordion .accordion-item .accordion-collapse .accordion-body {
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-button.collapsed {
+    background-color: white;
+    color: black;
+}
+
+.accordion-body {
+    background-color: #f9f9f9;
+    padding: 15px;
+}
+
+.accordion-body ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.accordion-body ul li {
     font-size: 14px;
+    padding: 5px 0;
 }
 
-
-/* Flexbox and responsive media queries */
-@media (min-width: 768px) {
-    .faq-section .row {
-        display: flex;
-        flex-direction: row;
-    }
-}
-
-@media (max-width: 767px) {
-    .faq-section .row {
-        display: flex;
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #accordionContainer {
         flex-direction: column;
     }
 
-    .faq-image img {
-        margin: 0 auto;
-        max-width: 70%;
-        height: auto;
+    .col-md-6 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .accordion-button {
+        font-size: 14px;
+        padding: 12px;
     }
 }
 
 @media (max-width: 480px) {
-    .accordion .accordion-item .accordion-header .accordion-button {
-        font-size: 15px;
+    #accordionContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; /* Allows items to wrap into the next row */
+        justify-content: space-around; /* Space between columns */
     }
 
-    .accordion .accordion-item .accordion-collapse .accordion-body {
-        font-size: 14px;
+    .accordion {
+        flex: 0 0 48%; /* Each accordion will take about 48% of the row */
+        margin-bottom: 1rem; /* Add spacing between rows */
     }
 
-    .faq-image img {
-        max-width: 100%;
-        margin-left: 0;
+    .accordion-button {
+        font-size: 8px; /* Smaller button text */
+        padding: 10px; /* Reduce padding for small screens */
+    }
+
+    .accordion-body ul li {
+        font-size: 11px; /* Adjust list font size */
     }
 }
 
 
 /*** FAQs End ***/
-
 
 /*** Blog Start ***/
 .blog .blog-item {
@@ -1250,12 +1289,13 @@
     box-shadow: 40vmin 0 5.347873916394244vmin currentColor;
 }
 
-.team{
+.team {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     background-color: #f5f5f5;
 }
+
 .team-img img {
     width: auto;
     height: 240px;
