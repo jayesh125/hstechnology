@@ -1221,7 +1221,7 @@
 @media (max-width: 380px) {
     .team-img img {
         width: auto;
-        height: 5rem;
+        height: 8rem;
         padding: 5px;
         background-color: rgba(255, 255, 255, 0.568);
     }
