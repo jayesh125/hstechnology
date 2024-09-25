@@ -874,10 +874,10 @@
 
 /*** FAQs Start ***/
 
-.container {
+.faq-section .container {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    padding-right: 0;
+    padding-left: 0;
 }
 
 .course-title {
@@ -1000,14 +1000,14 @@
     }
 
     .accordion {
-        flex: 0 0 48%;
+        flex: 0 0 55%;
         /* Each accordion will take about 48% of the row */
         margin-bottom: 1rem;
         /* Add spacing between rows */
     }
 
     .accordion-button {
-        font-size: 8px;
+        font-size: 0.6rem;
         /* Smaller button text */
         padding: 10px;
         /* Reduce padding for small screens */
