@@ -584,6 +584,7 @@
     }
 }
 
+
 /* For mobile screens up to 420px */
 @media (max-width: 420px) {
     .feature {
@@ -651,7 +652,6 @@
         flex: 0 0 25%;
     }
 }
-
 
 /*** Feature End ***/
 
@@ -742,6 +742,12 @@
 .counter {
     border-radius: 10px;
     padding: 20px;
+}
+
+@media (max-width: 420px) {
+    .counter .counter-counting h5{
+        font-size: 1rem;
+    }
 }
 
 /*** Service Start ***/
@@ -953,7 +959,36 @@
 
     .accordion-button {
         font-size: 14px;
-        padding: 12px;
+    }
+}
+
+@media (min-width: 480px) {
+    #accordionContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* Allows items to wrap into the next row */
+        justify-content: space-around;
+        /* Space between columns */
+    }
+
+    .accordion {
+        flex: 0 0 48%;
+        /* Each accordion will take about 48% of the row */
+        margin-bottom: 1rem;
+        /* Add spacing between rows */
+    }
+
+    .accordion-button {
+        font-size: 1rem;
+        /* Smaller button text */
+        /* padding: 10px; */
+        /* Reduce padding for small screens */
+    }
+
+    .accordion-body ul li {
+        font-size: 11px;
+        /* Adjust list font size */
     }
 }
 
@@ -1311,7 +1346,7 @@
 .card {
     display: flex;
     flex-direction: row;
-    height: 5%;
+    height: 105px;
     width: 30%;
     border-radius: 15px;
     overflow: hidden;
@@ -1329,7 +1364,7 @@
 
 .card-image {
     position: relative;
-    width: 50%;
+    width: 20%;
     height: auto;
     overflow: hidden;
     align-content: center;
@@ -1369,12 +1404,14 @@
 }
 
 .card-content {
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-transform: var(--bs-gutter-x);
     padding: 10px;
     width: 80%;
     transition: background-color 0.3s ease;
     align-content: center;
+    color: var(--bs-primary);
+    font-weight: bold;
 }
 
 .card-content p{
@@ -1383,14 +1420,19 @@
 }
 
 @media (max-width: 420px) {
+    .card-container{
+        padding: 10px;
+        gap: 10px;
+    }
     .card {
         height: 5%;
         width: 40%;
+        margin: 0;
     }
 
     .card-content {
-        font-size: 0.4rem;
-        gap: 5px;
+        font-size: 0.5rem;
+        
     }
 
     .icons .btn-sm-square{
@@ -1400,6 +1442,14 @@
     .icon {
         font-size: 0.5rem;
     }  
+
+    .card-image {
+        position: relative;
+        width: 50%;
+        height: auto;
+        overflow: hidden;
+        align-content: center;
+    }
 }
 /*** Team End ***/
 

@@ -163,7 +163,6 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!isDeleting && text === fullText) {
             typingSpeed = 2000; // Pause at the end of the text
             isDeleting = true;
-            console.log("Deleting");
         } else if (isDeleting && text === '') {
             isDeleting = false;
             index = (index + 1) % texts.length;
