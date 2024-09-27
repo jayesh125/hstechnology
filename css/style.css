@@ -134,6 +134,9 @@
 
 /*** Topbar End ***/
 
+html{
+    scroll-behavior: smooth;
+}
 
 /*** Navbar Start ***/
 .nav-bar {

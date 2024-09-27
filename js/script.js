@@ -140,7 +140,6 @@ const syllabus = {
     }],
 }
 
-
 document.addEventListener('DOMContentLoaded', function () {
     const typewriter = document.querySelector('.typewriter-text');
     const texts = ['Funnel Building',
@@ -222,6 +221,28 @@ document.addEventListener('DOMContentLoaded', function () {
     // Generate accordion with the provided syllabus data
     generateAccordion(syllabus);
 
-
+    $(document).ready(function () {
+        $('.navbar-nav .nav-link').on('click', function (event) {
+            // Check if the link is pointing to an internal section
+            if (this.hash !== "") {
+                event.preventDefault(); // Prevent default anchor click behavior
+                var hash = this.hash; // Store hash value
+                
+                // Animate smooth scroll
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 1000, function () {
+                    // Add hash to URL after scroll
+                    window.location.hash = hash;
+                });
+                
+                // Collapse the navbar after click if toggler is visible
+                if ($('.navbar-toggler').is(':visible')) {
+                    $('.navbar-collapse').collapse('hide');
+                }
+            }
+        });
+    });
+    
 });
 
