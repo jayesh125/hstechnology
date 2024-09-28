@@ -846,15 +846,15 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var navLinks = document.querySelectorAll('.nav-item.nav-link');
-            var navbarCollapse = document.querySelector('#navbarCollapse');
             var navbarToggler = document.querySelector('.navbar-toggler');
+            var navbarCollapse = document.querySelector('#navbarCollapse');
 
             navLinks.forEach(function (link) {
                 link.addEventListener('click', function (event) {
                     var target = link.getAttribute('href');
                     var isMobile = window.getComputedStyle(navbarToggler).display !== 'none';
 
-                    // If the navbar toggler is visible (meaning it's in mobile view)
+                    // Only apply the logic when the toggler is visible (meaning it's in mobile view)
                     if (isMobile) {
                         event.preventDefault(); // Prevent default anchor behavior
 
@@ -865,11 +865,15 @@
                         setTimeout(function () {
                             window.location.href = target;
                         }, 300); // Adjust the delay if necessary
+                    } else {
+                        // In full-screen, let the link navigate normally
+                        window.location.href = target;
                     }
                 });
             });
         });
     </script>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
