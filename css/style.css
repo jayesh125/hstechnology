@@ -4,12 +4,21 @@
     visibility: hidden;
     transition: opacity .5s ease-out, visibility 0s linear .5s;
     z-index: 99999;
+    height: 100vw;
+    width: 100vw;
 }
 
 #spinner.show {
     transition: opacity .5s ease-out, visibility 0s linear 0s;
     visibility: visible;
     opacity: 1;
+}
+
+@media (max-width: 420px) {
+    #spinner {
+        height: 100vh;
+        width: 100%;
+    }
 }
 
 /*** Spinner End ***/
@@ -741,7 +750,7 @@
 }
 
 @media (max-width: 420px) {
-    .counter .counter-counting h5{
+    .counter .counter-counting h5 {
         font-size: 1rem;
     }
 }
@@ -1331,10 +1340,13 @@
 
 .card-container {
     display: flex;
-    flex-wrap: wrap;  /* Allows cards to wrap to the next row */
+    flex-wrap: wrap;
+    /* Allows cards to wrap to the next row */
     align-content: center;
-    justify-content: space-around;  /* Ensures space between cards */
-    gap: 20px; /* Space between cards */
+    justify-content: space-around;
+    /* Ensures space between cards */
+    gap: 20px;
+    /* Space between cards */
     padding: 20px;
     max-width: 1200px;
     width: 100%;
@@ -1343,10 +1355,13 @@
 @media (min-width: 1100px) {
     .card-container {
         display: flex;
-        flex-wrap: wrap;  /* Allows cards to wrap to the next row */
+        flex-wrap: wrap;
+        /* Allows cards to wrap to the next row */
         align-content: center;
-        justify-items: space-around;  /* Ensures space between cards */
-        gap: 20px; /* Space between cards */
+        justify-items: space-around;
+        /* Ensures space between cards */
+        gap: 20px;
+        /* Space between cards */
         padding: 20px;
         max-width: 1200px;
         width: 100%;
@@ -1424,16 +1439,17 @@
     font-weight: bold;
 }
 
-.card-content p{
+.card-content p {
     padding: 0;
     margin-bottom: 0rem;
 }
 
 @media (max-width: 420px) {
-    .card-container{
+    .card-container {
         padding: 10px;
         gap: 10px;
     }
+
     .card {
         height: 5%;
         width: 40%;
@@ -1442,16 +1458,16 @@
 
     .card-content {
         font-size: 0.5rem;
-        
+
     }
 
-    .icons .btn-sm-square{
+    .icons .btn-sm-square {
         height: 5px;
     }
-    
+
     .icon {
         font-size: 0.5rem;
-    }  
+    }
 
     .card-image {
         position: relative;
@@ -1461,6 +1477,7 @@
         align-content: center;
     }
 }
+
 /*** Team End ***/
 
 
