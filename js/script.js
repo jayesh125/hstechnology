@@ -221,28 +221,45 @@ document.addEventListener('DOMContentLoaded', function () {
     // Generate accordion with the provided syllabus data
     generateAccordion(syllabus);
 
-    $(document).ready(function () {
-        $('.navbar-nav .nav-link').on('click', function (event) {
-            // Check if the link is pointing to an internal section
-            if (this.hash !== "") {
-                event.preventDefault(); // Prevent default anchor click behavior
-                var hash = this.hash; // Store hash value
-                
-                // Animate smooth scroll
-                $('html, body').animate({
-                    scrollTop: $(hash).offset().top
-                }, 1000, function () {
-                    // Add hash to URL after scroll
-                    window.location.hash = hash;
-                });
-                
-                // Collapse the navbar after click if toggler is visible
-                if ($('.navbar-toggler').is(':visible')) {
-                    $('.navbar-collapse').collapse('hide');
-                }
+    var navLinks = document.querySelectorAll('.nav-item.nav-link');
+    var navbarCollapse = document.querySelector('#navbarCollapse');
+    var navbarToggler = document.querySelector('.navbar-toggler');
+
+    navLinks.forEach(function (link) {
+        link.addEventListener('click', function (event) {
+            var target = link.getAttribute('href');
+            var isMobile = window.getComputedStyle(navbarToggler).display !== 'none';
+
+            // If the navbar toggler is visible (meaning it's in mobile view)
+            if (isMobile) {
+                event.preventDefault(); // Prevent default anchor behavior
+
+                // Collapse the navbar
+                navbarToggler.click();
+
+                // Navigate to the link after a short delay to allow navbar to collapse
+                setTimeout(function () {
+                    window.location.href = target;
+                }, 300); // Adjust the delay if necessary
             }
         });
     });
-    
+    // Add smooth scrolling to all links inside the navbar
+    var links = document.querySelectorAll('.nav-link');
+    links.forEach(function (link) {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            var target = link.getAttribute('href');
+            document.querySelector(target).scrollIntoView({ behavior:'smooth' });
+            // Add a class to the active link
+            link.classList.add('active');
+            // Remove the active class from all other links
+            links.forEach(function (otherLink) {
+                if (otherLink!== link) {
+                    otherLink.classList.remove('active');
+                }
+            });
+        });
+    });
 });
 
